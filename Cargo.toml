@@ -1,6 +1,6 @@
 [package]
 name = "actix-quick-extract"
-version = "0.1.0"
+version = "0.1.0-beta.0"
 edition = "2021"
 authors = ["Wyatt Herkamp <wherkamp@gmail.com"]
 repository = "https://github.com/wyatt-herkamp/actix-quick-extract"
