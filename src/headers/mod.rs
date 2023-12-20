@@ -47,6 +47,7 @@ pub struct AcceptNoneDenyBad<T: HeaderType>(pub Option<T>);
 
 /// A type that can be extracted from a request header
 pub trait HeaderType {
+    /// Extracts the header from the request
     fn from_request(req: &actix_web::HttpRequest) -> Result<Self, crate::ExtractError>
     where
         Self: Sized;

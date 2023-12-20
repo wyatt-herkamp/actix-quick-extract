@@ -1,5 +1,5 @@
 #![deny(clippy::str_to_string)]
-
+#![deny(missing_docs)]
 //! # Actix-Quick-Extract
 //!
 //! Extract information from a web request easily.
@@ -15,10 +15,13 @@ pub use ip_addr::IpAddr;
 /// All Errors return a `400 Bad Request` response
 #[derive(Debug, Error)]
 pub enum ExtractError {
+    /// Header was not found
     #[error("No {0} Header Found")]
     MissingHeader(&'static str),
+    /// Header was not valid UTF-8
     #[error("Header {0} Header was not valid UTF-8")]
     ToStrError(&'static str, ToStrError),
+    /// Information such as IpAddr was not found
     #[error("Missing {0}")]
     MissingInfo(&'static str),
 }

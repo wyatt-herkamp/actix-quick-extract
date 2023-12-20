@@ -21,8 +21,9 @@ pub struct OriginOrHost {
     #[into]
     #[as_ref(str)]
     #[deref(forward)]
+    /// The url of the origin
     pub url: String,
-    /// Will be none if the header was Host
+    /// Whether the origin is https checks if url starts with `https`
     pub is_https: bool,
 }
 

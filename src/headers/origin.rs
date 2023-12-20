@@ -20,7 +20,9 @@ pub struct Origin {
     #[into]
     #[as_ref(str)]
     #[deref(forward)]
+    /// The url of the origin
     pub url: String,
+    /// Whether the origin is https checks if url starts with `https`
     pub is_https: bool,
 }
 
