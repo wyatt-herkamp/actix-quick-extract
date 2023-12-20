@@ -9,8 +9,8 @@ use derive_more::{AsRef, Deref, Display, From, Into};
 /// use actix_web::get;
 ///
 /// #[get("/")]
-/// pub async fn index(auth: RawAuthorization) -> String {
-///     format!("Your auth Header is: {}", auth)
+/// pub async fn index(authorization: RawAuthorization) -> String {
+///     format!("Your authorization Header is: {}", authorization)
 /// }
 /// ```
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Display, Into, AsRef, Deref, From)]
